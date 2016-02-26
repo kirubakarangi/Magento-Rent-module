@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rent_Details>
+            <version>1.0.0.0</version>
+        </Rent_Details>
+    </modules>
+    <global>
+        <blocks>
+            <operations_adminhtml>
+                <class>Rent_Details_Block_Adminhtml</class>
+            </operations_adminhtml>
+			<catalog>
+				<rewrite>
+					<product_view_options_type_select>Rent_Details_Block_Product_View_Options_Type_Select</product_view_options_type_select>
+				</rewrite>
+			</catalog>			
+        </blocks>
+		<models>
+			<catalog>
+				<rewrite>
+					<product_type_price>Rent_Details_Model_Product_Type_Price</product_type_price>
+				</rewrite>
+			</catalog>
+		</models>
+        <helpers>
+            <operations>
+                <class>Rent_Details_Helper</class>
+            </operations>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <rent_details after="Mage_Adminhtml">Rent_Details_Adminhtml</rent_details>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+<!--         <translate> -->
+<!--             <modules> -->
+<!--                 <Rent_Details> -->
+<!--                     <files> -->
+<!--                         <default>Rent_Details.csv</default> -->
+<!--                     </files> -->
+<!--                 </Rent_Details> -->
+<!--             </modules> -->
+<!--         </translate> -->
+        <layout>
+            <updates>
+                <operations>
+                    <file>operations.xml</file>
+                </operations>
+            </updates>
+        </layout>
+    </adminhtml>
+	<frontend>
+    <routers>
+        <rentdetails>
+            <use>standard</use>
+            <args>
+                <module>Rent_Details</module>
+                <frontName>rentdetails</frontName>
+            </args>
+        </rentdetails>
+    </routers>
+    <layout>
+        <updates>
+            <rentdetails>
+                <file>rentdetails.xml</file>
+            </rentdetails>
+        </updates>
+    </layout>
+</frontend>
+</config>
