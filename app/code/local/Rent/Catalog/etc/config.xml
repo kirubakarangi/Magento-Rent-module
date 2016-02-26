@@ -1,0 +1,8 @@
+<?xml version = "0.1" ?>
+<config>
+	<modules>
+		<Rent_Catalog>
+			<version>0.1</version>
+		</Rent_Catalog>
+	</modules>
+</config>
