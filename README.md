@@ -1,0 +1,2 @@
+# Magento-Rent-module
+module
