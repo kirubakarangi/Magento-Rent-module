@@ -1,0 +1,66 @@
+<?xml version="1.0"?> 
+<layout version="0.1.0"> 
+  <catalog_product_view>
+    <reference name="product.info.options" >
+        <action method="setTemplate">
+            <template>rentdetails/product/view/addtocart.phtml</template>
+        </action>
+    </reference>
+    <reference name="product.info.addtocart" >
+        <action method="setTemplate">
+            <template>rentdetails/product/view/addtocart.phtml</template>
+        </action>
+    </reference>
+    <reference name="product.info.container1" >
+    <action method="unsetchild">
+      <block>product.info.options.wrapper.bottom</block>
+    </action>
+   </reference>
+	<reference name="product.info.container2" >
+		<action method="unsetchild">
+			<block>product.info.options.wrapper.bottom</block>
+		</action>
+	</reference>
+	<reference name="head">
+		<action method="addCss"><stylesheet>rentdetails/css/lightbox.css</stylesheet></action>
+		<action method="addJs"><script>rentdetails/js/rentdetails.js</script></action>
+	</reference>
+  </catalog_product_view>
+    <catalog_category_default>
+        <reference name="product.info.options" >
+        <action method="setTemplate">
+            <template>rentdetails/product/view/addtocart.phtml</template>
+        </action>
+    </reference>
+            <reference name="product.info.addtocart" >
+        <action method="setTemplate">
+            <template>rentdetails/product/view/addtocart.phtml</template>
+        </action>
+    </reference>
+  <reference name="product.info.container1" >
+    <action method="unsetchild">
+      <block>product.info.options.wrapper.bottom</block>
+    </action>
+  </reference>
+  <reference name="head">
+    <action method="addCss"><stylesheet>rentdetails/css/lightbox.css</stylesheet></action>
+    <action method="addJs"><script>rentdetails/js/rentdetails.js</script></action>
+  </reference>
+  </catalog_category_default>
+  <checkout_cart_index>
+<reference name="checkout.cart">
+   <action method="addItemRender">
+      <type>simple</type><block>checkout/cart_item_renderer</block><template>rentdetails/checkout/cart/item/default.phtml</template>
+   </action>
+</reference>
+   </checkout_cart_index>
+      <default>
+    <cms_page> <!-- need to be redefined for your needs -->
+        <reference name="content">
+            <block type="cms/block" name="cms_newest_product" as="cms_newest_product">
+                <action method="setBlockId"><block_id>terms_and_conditions_for_rent</block_id></action>
+            </block>
+        </reference>
+    </cms_page>
+</default>
+</layout>  
