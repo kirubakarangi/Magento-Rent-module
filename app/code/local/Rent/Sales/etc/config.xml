@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rent_Sales>
+            <version>1.0.0.0</version>
+        </Rent_Sales>
+    </modules>
+	<global>
+		<models>
+			<Rent_Sales>
+				<catalog>
+					<rewrite>
+						<quote_item_abstract>Rent_Sales_Quote_Item_Sales</quote_item_abstract>
+					</rewrite>
+				</catalog>
+			</Rent_Sales>	
+		<models>
+		<resources>
+			<Rent_Eav_setup><!-- becomes folder under sql dir -->
+				<setup>
+					<module>Rent_Eav</module>
+					<class>Rent_Eav_Model_Entity_Setup</class>
+				</setup>
+			</Rent_Eav_setup>
+		</resources> 
+	</global>
+</config>
