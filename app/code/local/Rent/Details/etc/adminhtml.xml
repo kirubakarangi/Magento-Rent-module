@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <sales>
+            <children>
+                <operations translate="title" module="operations">
+                    <title>Rent Details</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/operations_order</action>
+                </operations>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <sales>
+                        <children>
+                            <operations translate="title">
+                                <title>Rent Details</title>
+                                <sort_order>1</sort_order>
+                            </operations>
+                        </children>
+                    </sales>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
